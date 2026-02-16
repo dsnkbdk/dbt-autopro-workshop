@@ -1,0 +1,26 @@
+version: 2
+
+snapshots:
+  - name: snap_autopro_workshop__customers
+    description: SCD Type 2 snapshot for customers.
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - customer_id
+            - dbt_valid_from
+
+  - name: snap_autopro_workshop__technicians
+    description: SCD Type 2 snapshot for technicians.
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - technician_id
+            - dbt_valid_from
+
+  - name: snap_autopro_workshop__vehicles
+    description: SCD Type 2 snapshot for vehicles.
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - vehicle_id
+            - dbt_valid_from

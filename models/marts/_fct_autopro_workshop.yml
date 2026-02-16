@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: stg_autopro_workshop__customers
+  - name: dim_autopro_workshop__customers
     columns:
       - name: customer_id
         data_tests:
@@ -11,10 +11,10 @@ models:
         data_tests:
           - relationships:
               arguments:
-                to: ref('stg_autopro_workshop__workshops')
+                to: ref('dim_autopro_workshop__workshops')
                 field: workshop_id
 
-  - name: stg_autopro_workshop__technicians
+  - name: dim_autopro_workshop__technicians
     columns:
       - name: technician_id
         data_tests:
@@ -24,10 +24,10 @@ models:
         data_tests:
           - relationships:
               arguments:
-                to: ref('stg_autopro_workshop__workshops')
+                to: ref('dim_autopro_workshop__workshops')
                 field: workshop_id
 
-  - name: stg_autopro_workshop__vehicles
+  - name: dim_autopro_workshop__vehicles
     columns:
       - name: vehicle_id
         data_tests:
@@ -37,24 +37,38 @@ models:
         data_tests:
           - relationships:
               arguments:
-                to: ref('stg_autopro_workshop__customers')
+                to: ref('dim_autopro_workshop__customers')
                 field: customer_id
 
-  - name: stg_autopro_workshop__servicetypes
-    columns:
-      - name: service_type_id
-        data_tests:
-          - unique
-          - not_null
-
-  - name: stg_autopro_workshop__workshops
+  - name: dim_autopro_workshop__workshops
     columns:
       - name: workshop_id
         data_tests:
           - unique
           - not_null
 
-  - name: stg_autopro_workshop__servicetransactions
+  - name: dim_autopro_workshop__servicetypes
+    columns:
+      - name: service_type_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: fct_autopro_workshop__servicetransactions
+    tests:
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "labour_hours >= 0"
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "labour_cost >= 0"
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "parts_cost >= 0"
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "total_cost >= 0"
+
     columns:
       - name: transaction_id
         data_tests:
@@ -63,27 +77,43 @@ models:
       - name: transaction_date
         data_tests:
           - not_null
+      - name: modified_date
+        data_tests:
+          - not_null
       - name: customer_id
         data_tests:
           - relationships:
               arguments:
-                to: ref('stg_autopro_workshop__customers')
+                to: ref('dim_autopro_workshop__customers')
                 field: customer_id
+      - name: vehicle_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_autopro_workshop__vehicles')
+                field: vehicle_id
       - name: technician_id
         data_tests:
           - relationships:
               arguments:
-                to: ref('stg_autopro_workshop__technicians')
+                to: ref('dim_autopro_workshop__technicians')
                 field: technician_id
       - name: workshop_id
         data_tests:
           - relationships:
               arguments:
-                to: ref('stg_autopro_workshop__workshops')
+                to: ref('dim_autopro_workshop__workshops')
                 field: workshop_id
       - name: service_type_id
         data_tests:
           - relationships:
               arguments:
-                to: ref('stg_autopro_workshop__servicetypes')
+                to: ref('dim_autopro_workshop__servicetypes')
                 field: service_type_id
+
+  - name: dim_autopro_workshop__date
+    columns:
+      - name: date_day
+        data_tests:
+          - unique
+          - not_null
