@@ -1,0 +1,92 @@
+version: 2
+
+models:
+  - name: stg_autopro_workshop__customers
+    columns:
+      - name: customer_id
+        data_tests:
+          - unique
+          - not_null
+      - name: preferred_workshop
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_autopro_workshop__workshops')
+                field: workshop_id
+
+  - name: stg_autopro_workshop__technicians
+    columns:
+      - name: technician_id
+        data_tests:
+          - unique
+          - not_null
+      - name: workshop_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_autopro_workshop__workshops')
+                field: workshop_id
+
+  - name: stg_autopro_workshop__vehicles
+    columns:
+      - name: vehicle_id
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_autopro_workshop__customers')
+                field: customer_id
+
+  - name: stg_autopro_workshop__servicetypes
+    columns:
+      - name: service_type_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_autopro_workshop__workshops
+    columns:
+      - name: workshop_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_autopro_workshop__servicetransactions
+    columns:
+      - name: transaction_id
+        data_tests:
+          - unique
+          - not_null
+      - name: transaction_date
+        data_tests:
+          - not_null
+      - name: modified_date
+        data_tests:
+          - not_null
+      - name: customer_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_autopro_workshop__customers')
+                field: customer_id
+      - name: technician_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_autopro_workshop__technicians')
+                field: technician_id
+      - name: workshop_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_autopro_workshop__workshops')
+                field: workshop_id
+      - name: service_type_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_autopro_workshop__servicetypes')
+                field: service_type_id

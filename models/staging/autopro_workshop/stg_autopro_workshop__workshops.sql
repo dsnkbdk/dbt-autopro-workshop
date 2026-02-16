@@ -8,7 +8,16 @@ source as (
 
 renamed as (
 
-    select *
+    select
+        workshop_id,
+        workshop_name,
+        city,
+        region,
+        manager_name,
+        _etl_loaded_at,
+        _etl_file_name,
+        _etl_row_number
+
     from source
 
 )
