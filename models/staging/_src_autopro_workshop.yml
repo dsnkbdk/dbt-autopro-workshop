@@ -1,0 +1,91 @@
+version: 2
+
+sources:
+  - name: autopro_workshop
+    database: raw
+    schema: public
+    
+    tables:
+
+      - name: customers
+        columns:
+          - name: customer_id
+            data_tests:
+              - unique
+              - not_null
+        config:
+          freshness:
+            warn_after:
+              count: 36
+              period: hour
+            error_after: 
+              count: 72
+              period: hour
+          loaded_at_field: _etl_loaded_at
+
+      - name: servicetransactions
+        columns:
+          - name: transaction_id
+            data_tests:
+              - unique
+              - not_null 
+          - name: transaction_date
+            data_tests:
+              - not_null
+        config:
+          freshness:
+            warn_after:
+              count: 36
+              period: hour
+            error_after: 
+              count: 72
+              period: hour
+          loaded_at_field: _etl_loaded_at
+
+      - name: technicians
+        columns:
+          - name: technician_id
+            data_tests:
+              - unique
+              - not_null
+        config:
+          freshness:
+            warn_after:
+              count: 36
+              period: hour
+            error_after: 
+              count: 72
+              period: hour
+          loaded_at_field: _etl_loaded_at
+      
+      - name: vehicles
+        columns:
+          - name: vehicle_id
+            data_tests:
+              - unique
+              - not_null
+        config:
+          freshness:
+            warn_after:
+              count: 36
+              period: hour
+            error_after: 
+              count: 72
+              period: hour
+          loaded_at_field: _etl_loaded_at
+      
+      - name: servicetypes
+        columns:
+          - name: service_type_id
+            data_tests:
+              - unique
+              - not_null 
+      
+      - name: workshops
+        columns:
+          - name: workshop_id
+            data_tests:
+              - unique
+              - not_null 
+      
+
