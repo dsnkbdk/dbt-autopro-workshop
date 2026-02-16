@@ -1,0 +1,5 @@
+vehicle_id,customer_id,make,model,year,rego,odometer,color
+V002,C002,Mazda,CX-5,2020,DEF456,32850,Blue
+V006,C021,Nissan,Qashqai,2020,PQR678,35420,Red
+V015,C015,Honda,Accord,2018,QRS345,51200,Grey
+V021,C021,Subaru,Outback,2021,IJK123,22000,Green

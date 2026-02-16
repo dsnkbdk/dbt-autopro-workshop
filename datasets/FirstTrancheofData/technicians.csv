@@ -1,0 +1,11 @@
+technician_id,first_name,last_name,workshop_id,qualification_level,hourly_rate,hire_date
+T001,Mark,Anderson,WS001,Senior,85.00,2020-03-15
+T002,Lucy,Roberts,WS001,Intermediate,65.00,2021-06-01
+T003,Tom,Clarke,WS002,Senior,85.00,2019-11-20
+T004,Rachel,Bennett,WS002,Junior,50.00,2023-01-10
+T005,Alex,Morgan,WS003,Senior,85.00,2020-08-05
+T006,Olivia,Palmer,WS003,Intermediate,65.00,2022-02-14
+T007,Ryan,Foster,WS004,Senior,85.00,2021-04-22
+T008,Emily,Hughes,WS004,Intermediate,65.00,2022-09-30
+T009,Nathan,Cooper,WS001,Intermediate,65.00,2022-05-18
+T010,Sophie,Reed,WS002,Junior,50.00,2023-06-22

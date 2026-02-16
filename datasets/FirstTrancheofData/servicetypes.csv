@@ -1,0 +1,9 @@
+service_type_id,service_type_name,category
+ST001,WOF Inspection,Inspection
+ST002,Full Service,Maintenance
+ST003,Brake Repair,Repair
+ST004,Engine Diagnostic,Diagnostic
+ST005,Tyre Replacement,Repair
+ST006,Oil Change,Maintenance
+ST007,Battery Replacement,Repair
+ST008,Air Conditioning Service,Maintenance

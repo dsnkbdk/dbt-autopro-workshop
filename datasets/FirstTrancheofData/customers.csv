@@ -1,0 +1,21 @@
+customer_id,first_name,last_name,email,phone,address,city,postcode,preferred_workshop
+C001,John,Smith,john.smith@email.com,021-555-0101,15 Queen Street,Auckland,1010,WS001
+C002,Sarah,Johnson,sarah.j@email.com,021-555-0102,42 Lake Road,Auckland,0622,WS002
+C003,Michael,Williams,m.williams@email.com,021-555-0103,88 Victoria Street,Hamilton,3204,WS003
+C004,Emma,Brown,emma.brown@email.com,021-555-0104,23 Cameron Road,Tauranga,3110,WS004
+C005,David,Jones,david.jones@email.com,021-555-0105,156 Ponsonby Road,Auckland,1011,WS001
+C006,Lisa,Davis,lisa.davis@email.com,021-555-0106,67 Glenfield Road,Auckland,0627,WS002
+C007,James,Miller,james.m@email.com,021-555-0107,34 Grey Street,Hamilton,3216,WS003
+C008,Sophie,Wilson,sophie.w@email.com,021-555-0108,91 Fraser Street,Tauranga,3112,WS004
+C009,Robert,Moore,rob.moore@email.com,021-555-0109,22 Karangahape Road,Auckland,1010,WS001
+C010,Jennifer,Taylor,jen.taylor@email.com,021-555-0110,145 East Coast Road,Auckland,0630,WS002
+C011,William,Anderson,w.anderson@email.com,021-555-0111,56 Tristram Street,Hamilton,3206,WS003
+C012,Amanda,Thomas,amanda.t@email.com,021-555-0112,78 Maunganui Road,Tauranga,3116,WS004
+C013,Daniel,Jackson,dan.jackson@email.com,021-555-0113,99 Parnell Road,Auckland,1052,WS001
+C014,Michelle,White,michelle.w@email.com,021-555-0114,12 Taharoto Road,Auckland,0622,WS002
+C015,Christopher,Harris,chris.h@email.com,021-555-0115,45 Boundary Road,Hamilton,3214,WS003
+C016,Patricia,Martin,patricia.m@email.com,021-555-0116,34 Dominion Road,Auckland,1024,WS001
+C017,Thomas,Garcia,thomas.g@email.com,021-555-0117,88 Hillsborough Road,Auckland,1042,WS001
+C018,Karen,Rodriguez,karen.r@email.com,021-555-0118,56 Stoddard Road,Auckland,0626,WS002
+C019,Kevin,Martinez,kevin.m@email.com,021-555-0119,23 Ulster Street,Hamilton,3200,WS003
+C020,Nancy,Hernandez,nancy.h@email.com,021-555-0120,67 Elizabeth Street,Tauranga,3110,WS004

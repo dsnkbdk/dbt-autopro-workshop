@@ -1,0 +1,4 @@
+technician_id,first_name,last_name,workshop_id,qualification_level,hourly_rate,hire_date
+T002,Lucy,Roberts,WS001,Senior,75.00,2021-06-01
+T004,Rachel,Bennett,WS001,Intermediate,60.00,2023-01-10
+T008,Emily,Hughes,WS004,Intermediate,65.00,2022-09-30

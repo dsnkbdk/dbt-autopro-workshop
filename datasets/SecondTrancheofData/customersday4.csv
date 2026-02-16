@@ -1,0 +1,5 @@
+customer_id,first_name,last_name,email,phone,address,city,postcode,preferred_workshop
+C002,Sarah,Johnson,sarah.j@email.com,021-555-0102,78 Marina Drive,Auckland,0630,WS002
+C005,David,Jones,david.jones@email.com,021-555-0105,23 Westmere Road,Auckland,1022,WS001
+C011,William,Anderson,w.anderson@email.com,021-555-0111,56 Tristram Street,Hamilton,3206,WS003
+C021,Richard,Lee,richard.lee@email.com,021-555-0121,92 Remuera Road,Auckland,1050,WS001
